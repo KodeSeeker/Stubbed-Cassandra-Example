@@ -1,0 +1,499 @@
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building cassandra-unit-test 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[WARNING] The artifact org.apache.commons:commons-io:jar:1.3.2 has been relocated to commons-io:commons-io:jar:1.3.2
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ cassandra-unit-test ---
+[INFO] Deleting /Users/npipaliya/fdp-dev-workspace/cassandra-unit-test/target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ cassandra-unit-test ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/npipaliya/fdp-dev-workspace/cassandra-unit-test/src/main/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ cassandra-unit-test ---
+[INFO] Compiling 6 source files to /Users/npipaliya/fdp-dev-workspace/cassandra-unit-test/target/classes
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ cassandra-unit-test ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory /Users/npipaliya/fdp-dev-workspace/cassandra-unit-test/src/test/resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:testCompile (default-testCompile) @ cassandra-unit-test ---
+[INFO] Compiling 2 source files to /Users/npipaliya/fdp-dev-workspace/cassandra-unit-test/target/test-classes
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ cassandra-unit-test ---
+[INFO] Surefire report directory: /Users/npipaliya/fdp-dev-workspace/cassandra-unit-test/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.intuit.cassandra.AppTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.021 sec
+Running com.intuit.cassandra.PersonDaoCassandraTest
+09:56:00.947 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-2] INFO  o.s.server.priming.PrimingServer - Opening port 8043 for priming
+09:56:00.992 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-2] INFO  o.scassandra.server.actors.TcpServer - Port 8042 ready for Cassandra binary connections.
+09:56:00.993 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-4] INFO  o.s.server.ServerReadyListener - ServerReady - No listener yet.
+09:56:01.339 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-4] INFO  o.s.server.priming.PrimingServer - Priming server bound to admin port 8043
+09:56:01.339 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-4] INFO  o.s.server.ServerReadyListener - ServerReady - Forwarding ServerReady to listener.
+09:56:01.339 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-4] INFO  o.s.server.ServerReadyListener - OnServerReady - ServerReady message already received. Sending ServerReady.
+[INFO] [06/19/2015 09:56:01.338] [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-6] [akka://CassandraServerStub-8042-8043/user/IO-HTTP/listener-0] Bound to localhost/127.0.0.1:8043
+09:56:01.708 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-4] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.peers at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.710 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-4] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.peers
+09:56:01.710 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-4] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.local WHERE key='local' at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.710 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-4] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.local WHERE key='local'
+09:56:01.726 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-2] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_keyspaces at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.726 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-2] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_keyspaces
+09:56:01.726 [main] WARN  c.d.driver.core.ControlConnection - Cannot find Cassandra version for host localhost/127.0.0.1 to parse the schema, using 2.0.0 based on protocol version in use. If parsing the schema fails, this could be the cause
+09:56:01.726 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-2] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_columnfamilies at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.726 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-2] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_columnfamilies
+09:56:01.726 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-2] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_columns at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.726 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-2] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_columns
+09:56:01.727 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-5] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.peers at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.728 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-5] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.peers
+09:56:01.728 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-5] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.local WHERE key='local' at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.728 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-5] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.local WHERE key='local'
+09:56:01.739 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-6] INFO  o.s.server.actors.QueryHandler - Incoming query: use people at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.743 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-6] INFO  o.s.server.actors.QueryHandler - Incoming query: USE "people" at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.743 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-6] INFO  o.s.server.actors.QueryHandler - No prime found for USE "people"
+09:56:01.749 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-6] INFO  o.s.server.actors.PrepareHandler - Prepared Statement has been prepared: |insert into person(name, age, interesting_dates) values (?,?,?)|. Prepared result is: PreparedResultV2(0,1,keyspace,table,List(CqlVarchar, CqlVarchar, CqlVarchar))
+09:56:01.767 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-2] INFO  o.s.server.actors.PrepareHandler - Prepared Statement has been prepared: |select * from person where name = ?|. Prepared result is: PreparedResultV2(0,2,keyspace,table,List(CqlVarchar))
+09:56:01.787 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-4] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.peers at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.787 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-4] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.peers
+09:56:01.787 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-4] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.local WHERE key='local' at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.787 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-4] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.local WHERE key='local'
+09:56:01.788 [main] WARN  c.d.driver.core.ControlConnection - Cannot find Cassandra version for host localhost/127.0.0.1 to parse the schema, using 2.0.0 based on protocol version in use. If parsing the schema fails, this could be the cause
+09:56:01.788 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-5] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_keyspaces at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.788 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-5] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_keyspaces
+09:56:01.789 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-5] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_columnfamilies at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.789 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-5] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_columnfamilies
+09:56:01.789 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-5] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_columns at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.789 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-5] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_columns
+09:56:01.790 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-2] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.peers at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.790 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-2] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.peers
+09:56:01.790 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-2] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.local WHERE key='local' at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.790 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-2] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.local WHERE key='local'
+09:56:01.795 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-2] INFO  o.s.server.actors.QueryHandler - Incoming query: use people at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.795 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-2] INFO  o.s.server.actors.QueryHandler - Incoming query: USE "people" at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.795 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-2] INFO  o.s.server.actors.QueryHandler - No prime found for USE "people"
+09:56:01.796 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-5] INFO  o.s.server.actors.PrepareHandler - Prepared Statement has been prepared: |insert into person(name, age, interesting_dates) values (?,?,?)|. Prepared result is: PreparedResultV2(0,3,keyspace,table,List(CqlVarchar, CqlVarchar, CqlVarchar))
+09:56:01.798 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-4] INFO  o.s.server.actors.PrepareHandler - Prepared Statement has been prepared: |select * from person where name = ?|. Prepared result is: PreparedResultV2(0,4,keyspace,table,List(CqlVarchar))
+expectedQuery : USE people
+list of queries : [Query{query='SELECT * FROM system.peers', consistency='ONE'}, Query{query='SELECT * FROM system.local WHERE key='local'', consistency='ONE'}, Query{query='SELECT * FROM system.schema_keyspaces', consistency='ONE'}, Query{query='SELECT * FROM system.schema_columnfamilies', consistency='ONE'}, Query{query='SELECT * FROM system.schema_columns', consistency='ONE'}, Query{query='SELECT * FROM system.peers', consistency='ONE'}, Query{query='SELECT * FROM system.local WHERE key='local'', consistency='ONE'}, Query{query='use people', consistency='ONE'}, Query{query='USE "people"', consistency='ONE'}]
+09:56:01.829 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-6] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:01.829 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-3] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:01.829 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:01.866 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.peers at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.866 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.peers
+09:56:01.866 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.local WHERE key='local' at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.866 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.local WHERE key='local'
+09:56:01.867 [main] WARN  c.d.driver.core.ControlConnection - Cannot find Cassandra version for host localhost/127.0.0.1 to parse the schema, using 2.0.0 based on protocol version in use. If parsing the schema fails, this could be the cause
+09:56:01.867 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_keyspaces at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.867 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_keyspaces
+09:56:01.867 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_columnfamilies at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.867 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_columnfamilies
+09:56:01.867 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_columns at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.868 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_columns
+09:56:01.868 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-3] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.peers at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.868 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-3] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.peers
+09:56:01.868 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-3] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.local WHERE key='local' at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.869 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-3] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.local WHERE key='local'
+09:56:01.873 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-3] INFO  o.s.server.actors.QueryHandler - Incoming query: use people at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.874 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-3] INFO  o.s.server.actors.QueryHandler - Incoming query: USE "people" at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.874 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-3] INFO  o.s.server.actors.QueryHandler - No prime found for USE "people"
+09:56:01.875 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.PrepareHandler - Prepared Statement has been prepared: |insert into person(name, age, interesting_dates) values (?,?,?)|. Prepared result is: PreparedResultV2(0,5,keyspace,table,List(CqlVarchar, CqlVarchar, CqlVarchar))
+09:56:01.876 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-6] INFO  o.s.server.actors.PrepareHandler - Prepared Statement has been prepared: |select * from person where name = ?|. Prepared result is: PreparedResultV2(0,6,keyspace,table,List(CqlVarchar))
+09:56:01.894 [main] INFO  o.s.http.client.PrimingClient - Sending {"when":{"query":"select * from person"},"then":{"result":"read_request_timeout"}} to url http://localhost:8043/prime-query-single
+09:56:01.932 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-6] INFO  o.s.s.priming.query.PrimeQueryStore - Adding prime with criteria PrimeCriteria(select * from person,List(org.scassandra.server.cqlmessages.ANY$@68b9b37b, org.scassandra.server.cqlmessages.ONE$@215f2f6e, org.scassandra.server.cqlmessages.TWO$@77b685f3, org.scassandra.server.cqlmessages.THREE$@701451eb, org.scassandra.server.cqlmessages.QUORUM$@460e54c9, org.scassandra.server.cqlmessages.ALL$@56e07c0d, org.scassandra.server.cqlmessages.LOCAL_QUORUM$@2bf0660a, org.scassandra.server.cqlmessages.EACH_QUORUM$@33bb310f, org.scassandra.server.cqlmessages.SERIAL$@4691ea51, org.scassandra.server.cqlmessages.LOCAL_SERIAL$@15ae9009, org.scassandra.server.cqlmessages.LOCAL_ONE$@777249fd),false) and prime result Prime(List(),ReadTimeout,Map(),,,None)
+09:56:01.936 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - Incoming query: select * from person at consistency: org.scassandra.server.cqlmessages.QUORUM$@460e54c9
+09:56:01.938 [New I/O worker #36] INFO  c.d.d.c.policies.LoggingRetryPolicy - Retrying on read timeout at consistency ONE (initial consistency: QUORUM, required responses: 1, received responses: 0, data retrieved: false, retries: 0)
+09:56:01.939 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-6] INFO  o.s.server.actors.QueryHandler - Incoming query: select * from person at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.944 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-8] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:01.945 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:01.945 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-10] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:01.972 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.peers at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.972 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.peers
+09:56:01.972 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.local WHERE key='local' at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.972 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.local WHERE key='local'
+09:56:01.973 [main] WARN  c.d.driver.core.ControlConnection - Cannot find Cassandra version for host localhost/127.0.0.1 to parse the schema, using 2.0.0 based on protocol version in use. If parsing the schema fails, this could be the cause
+09:56:01.973 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_keyspaces at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.973 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_keyspaces
+09:56:01.974 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_columnfamilies at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.974 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_columnfamilies
+09:56:01.974 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_columns at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.974 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_columns
+09:56:01.975 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.peers at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.975 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.peers
+09:56:01.975 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.local WHERE key='local' at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.975 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.local WHERE key='local'
+09:56:01.980 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - Incoming query: use people at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.981 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - Incoming query: USE "people" at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:01.981 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - No prime found for USE "people"
+09:56:01.982 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.PrepareHandler - Prepared Statement has been prepared: |insert into person(name, age, interesting_dates) values (?,?,?)|. Prepared result is: PreparedResultV2(0,7,keyspace,table,List(CqlVarchar, CqlVarchar, CqlVarchar))
+09:56:01.984 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.PrepareHandler - Prepared Statement has been prepared: |select * from person where name = ?|. Prepared result is: PreparedResultV2(0,8,keyspace,table,List(CqlVarchar))
+09:56:01.997 [main] INFO  o.s.http.client.PrimingClient - Sending {"when":{"queryPattern":"insert into person.*"},"then":{"variable_types":["varchar","int","list\u003ctimestamp\u003e"],"rows":[],"result":"success","fixedDelay":1000}} to url http://localhost:8043/prime-prepared-single
+09:56:02.037 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.s.cqlmessages.types.ColumnType$ - Java type varchar
+09:56:02.037 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.s.cqlmessages.types.ColumnType$ - Type is Some(CqlVarchar)
+09:56:02.038 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.s.cqlmessages.types.ColumnType$ - Java type int
+09:56:02.038 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.s.cqlmessages.types.ColumnType$ - Type is Some(CqlInt)
+09:56:02.038 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.s.cqlmessages.types.ColumnType$ - Java type list<timestamp>
+09:56:02.038 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.s.cqlmessages.types.ColumnType$ - Type is Some(CqlList(CqlTimestamp))
+09:56:02.062 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.peers at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.062 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.peers
+09:56:02.062 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.local WHERE key='local' at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.063 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.local WHERE key='local'
+09:56:02.063 [main] WARN  c.d.driver.core.ControlConnection - Cannot find Cassandra version for host localhost/127.0.0.1 to parse the schema, using 2.0.0 based on protocol version in use. If parsing the schema fails, this could be the cause
+09:56:02.063 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_keyspaces at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.064 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_keyspaces
+09:56:02.064 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_columnfamilies at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.064 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_columnfamilies
+09:56:02.064 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_columns at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.064 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_columns
+09:56:02.065 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.peers at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.065 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.peers
+09:56:02.065 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.local WHERE key='local' at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.065 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.local WHERE key='local'
+09:56:02.072 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-6] INFO  o.s.server.actors.QueryHandler - Incoming query: use people at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.073 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-6] INFO  o.s.server.actors.QueryHandler - Incoming query: USE "people" at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.073 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-6] INFO  o.s.server.actors.QueryHandler - No prime found for USE "people"
+09:56:02.075 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.PrepareHandler - Prepared Statement has been prepared: |insert into person(name, age, interesting_dates) values (?,?,?)|. Prepared result is: PreparedResultV2(0,9,keyspace,table,List(CqlVarchar, CqlInt, CqlList(CqlTimestamp)))
+09:56:02.077 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-10] INFO  o.s.server.actors.PrepareHandler - Prepared Statement has been prepared: |select * from person where name = ?|. Prepared result is: PreparedResultV2(0,10,keyspace,table,List(CqlVarchar))
+09:56:02.083 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-6] INFO  o.s.server.actors.PrepareHandler - Received execution of prepared statement |insert into person(name, age, interesting_dates) values (?,?,?)| and consistency |org.scassandra.server.cqlmessages.ONE$@215f2f6e|
+09:56:02.084 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-6] INFO  o.s.server.priming.ActivityLog - Recording PreparedStatementExecution(insert into person(name, age, interesting_dates) values (?,?,?),org.scassandra.server.cqlmessages.ONE$@215f2f6e,List(Some(Christopher), Some(29), None),List(CqlVarchar, CqlInt, CqlList(CqlTimestamp)))
+09:56:02.085 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-6] INFO  o.s.server.actors.PrepareHandler - Delaying response of prepared statement by 1000 milliseconds
+09:56:02.664 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:02.664 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:02.664 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-6] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:02.691 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-16] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.peers at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.691 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-16] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.peers
+09:56:02.691 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-16] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.local WHERE key='local' at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.691 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-16] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.local WHERE key='local'
+09:56:02.691 [main] WARN  c.d.driver.core.ControlConnection - Cannot find Cassandra version for host localhost/127.0.0.1 to parse the schema, using 2.0.0 based on protocol version in use. If parsing the schema fails, this could be the cause
+09:56:02.692 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_keyspaces at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.692 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_keyspaces
+09:56:02.692 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_columnfamilies at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.692 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_columnfamilies
+09:56:02.692 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_columns at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.692 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_columns
+09:56:02.693 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-16] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.peers at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.693 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-16] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.peers
+09:56:02.693 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-16] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.local WHERE key='local' at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.693 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-16] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.local WHERE key='local'
+09:56:02.698 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-20] INFO  o.s.server.actors.QueryHandler - Incoming query: use people at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.699 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-20] INFO  o.s.server.actors.QueryHandler - Incoming query: USE "people" at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.699 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-20] INFO  o.s.server.actors.QueryHandler - No prime found for USE "people"
+09:56:02.700 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-16] INFO  o.s.server.actors.PrepareHandler - Prepared Statement has been prepared: |insert into person(name, age, interesting_dates) values (?,?,?)|. Prepared result is: PreparedResultV2(0,11,keyspace,table,List(CqlVarchar, CqlVarchar, CqlVarchar))
+09:56:02.703 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-20] INFO  o.s.server.actors.PrepareHandler - Prepared Statement has been prepared: |select * from person where name = ?|. Prepared result is: PreparedResultV2(0,12,keyspace,table,List(CqlVarchar))
+09:56:02.714 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-16] INFO  o.s.server.actors.QueryHandler - Incoming query: select * from person at consistency: org.scassandra.server.cqlmessages.QUORUM$@460e54c9
+09:56:02.714 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-16] INFO  o.s.server.actors.QueryHandler - No prime found for select * from person
+09:56:02.719 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:02.719 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-20] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:02.719 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-16] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:02.744 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.peers at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.744 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.peers
+09:56:02.744 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.local WHERE key='local' at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.744 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.local WHERE key='local'
+09:56:02.745 [main] WARN  c.d.driver.core.ControlConnection - Cannot find Cassandra version for host localhost/127.0.0.1 to parse the schema, using 2.0.0 based on protocol version in use. If parsing the schema fails, this could be the cause
+09:56:02.745 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_keyspaces at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.745 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_keyspaces
+09:56:02.745 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_columnfamilies at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.745 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_columnfamilies
+09:56:02.745 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_columns at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.745 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_columns
+09:56:02.746 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-20] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.peers at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.746 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-20] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.peers
+09:56:02.746 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-20] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.local WHERE key='local' at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.746 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-20] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.local WHERE key='local'
+09:56:02.751 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - Incoming query: use people at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.751 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-6] INFO  o.s.server.actors.QueryHandler - Incoming query: USE "people" at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.751 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-6] INFO  o.s.server.actors.QueryHandler - No prime found for USE "people"
+09:56:02.752 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-20] INFO  o.s.server.actors.PrepareHandler - Prepared Statement has been prepared: |insert into person(name, age, interesting_dates) values (?,?,?)|. Prepared result is: PreparedResultV2(0,13,keyspace,table,List(CqlVarchar, CqlVarchar, CqlVarchar))
+09:56:02.753 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.PrepareHandler - Prepared Statement has been prepared: |select * from person where name = ?|. Prepared result is: PreparedResultV2(0,14,keyspace,table,List(CqlVarchar))
+09:56:02.763 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - Incoming query: select * from person at consistency: org.scassandra.server.cqlmessages.QUORUM$@460e54c9
+09:56:02.763 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - No prime found for select * from person
+09:56:02.769 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-16] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:02.769 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:02.769 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-2] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:02.792 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-10] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.peers at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.792 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-10] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.peers
+09:56:02.792 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-10] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.local WHERE key='local' at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.792 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-10] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.local WHERE key='local'
+09:56:02.793 [main] WARN  c.d.driver.core.ControlConnection - Cannot find Cassandra version for host localhost/127.0.0.1 to parse the schema, using 2.0.0 based on protocol version in use. If parsing the schema fails, this could be the cause
+09:56:02.793 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-16] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_keyspaces at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.793 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-16] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_keyspaces
+09:56:02.793 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-16] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_columnfamilies at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.793 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-16] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_columnfamilies
+09:56:02.793 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-16] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_columns at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.794 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-16] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_columns
+09:56:02.794 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-16] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.peers at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.794 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-16] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.peers
+09:56:02.795 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-16] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.local WHERE key='local' at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.795 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-16] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.local WHERE key='local'
+09:56:02.799 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - Incoming query: use people at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.800 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-11] INFO  o.s.server.actors.QueryHandler - Incoming query: USE "people" at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.800 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-11] INFO  o.s.server.actors.QueryHandler - No prime found for USE "people"
+09:56:02.801 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-10] INFO  o.s.server.actors.PrepareHandler - Prepared Statement has been prepared: |insert into person(name, age, interesting_dates) values (?,?,?)|. Prepared result is: PreparedResultV2(0,15,keyspace,table,List(CqlVarchar, CqlVarchar, CqlVarchar))
+09:56:02.802 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-11] INFO  o.s.server.actors.PrepareHandler - Prepared Statement has been prepared: |select * from person where name = ?|. Prepared result is: PreparedResultV2(0,16,keyspace,table,List(CqlVarchar))
+09:56:02.814 [main] INFO  o.s.http.client.PrimingClient - Sending {"when":{"query":"select * from person where name \u003d ?"},"then":{"variable_types":["varchar"],"rows":[{"name":"Chris Batey","age":29,"interesting_dates":[1434732962811]}],"result":"success","column_types":{"interesting_dates":"list\u003ctimestamp\u003e","age":"int"}}} to url http://localhost:8043/prime-prepared-single
+09:56:02.822 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.s.cqlmessages.types.ColumnType$ - Java type varchar
+09:56:02.822 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.s.cqlmessages.types.ColumnType$ - Type is Some(CqlVarchar)
+09:56:02.822 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.s.cqlmessages.types.ColumnType$ - Java type list<timestamp>
+09:56:02.822 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.s.cqlmessages.types.ColumnType$ - Type is Some(CqlList(CqlTimestamp))
+09:56:02.822 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.s.cqlmessages.types.ColumnType$ - Java type int
+09:56:02.823 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.s.cqlmessages.types.ColumnType$ - Type is Some(CqlInt)
+09:56:02.830 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.s.p.prepared.PrimePreparedStore - Storing prime for prepared statement PreparedPrime(List(CqlVarchar),Prime(List(Map(name -> Chris Batey, age -> 29, interesting_dates -> List(1434732962811))),Success,Map(name -> CqlVarchar, age -> CqlInt, interesting_dates -> CqlList(CqlTimestamp)),,,None)) with prime criteria PrimeCriteria(select * from person where name = ?,List(org.scassandra.server.cqlmessages.ANY$@68b9b37b, org.scassandra.server.cqlmessages.ONE$@215f2f6e, org.scassandra.server.cqlmessages.TWO$@77b685f3, org.scassandra.server.cqlmessages.THREE$@701451eb, org.scassandra.server.cqlmessages.QUORUM$@460e54c9, org.scassandra.server.cqlmessages.ALL$@56e07c0d, org.scassandra.server.cqlmessages.LOCAL_QUORUM$@2bf0660a, org.scassandra.server.cqlmessages.EACH_QUORUM$@33bb310f, org.scassandra.server.cqlmessages.SERIAL$@4691ea51, org.scassandra.server.cqlmessages.LOCAL_SERIAL$@15ae9009, org.scassandra.server.cqlmessages.LOCAL_ONE$@777249fd),false)
+09:56:02.831 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-10] INFO  o.s.server.actors.PrepareHandler - Received execution of prepared statement |select * from person where name = ?| and consistency |org.scassandra.server.cqlmessages.ONE$@215f2f6e|
+09:56:02.832 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-10] INFO  o.s.server.priming.ActivityLog - Recording PreparedStatementExecution(select * from person where name = ?,org.scassandra.server.cqlmessages.ONE$@215f2f6e,List(Some(Chris Batey)),List(CqlVarchar))
+09:56:02.835 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-16] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:02.835 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-10] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:02.835 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-5] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:02.860 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-5] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.peers at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.860 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-5] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.peers
+09:56:02.860 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-5] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.local WHERE key='local' at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.860 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-5] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.local WHERE key='local'
+09:56:02.861 [main] WARN  c.d.driver.core.ControlConnection - Cannot find Cassandra version for host localhost/127.0.0.1 to parse the schema, using 2.0.0 based on protocol version in use. If parsing the schema fails, this could be the cause
+09:56:02.861 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_keyspaces at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.861 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_keyspaces
+09:56:02.861 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_columnfamilies at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.861 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_columnfamilies
+09:56:02.861 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_columns at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.861 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_columns
+09:56:02.862 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-5] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.peers at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.862 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-5] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.peers
+09:56:02.862 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-5] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.local WHERE key='local' at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.862 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-5] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.local WHERE key='local'
+09:56:02.867 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-5] INFO  o.s.server.actors.QueryHandler - Incoming query: use people at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.868 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-21] INFO  o.s.server.actors.QueryHandler - Incoming query: USE "people" at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.868 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-21] INFO  o.s.server.actors.QueryHandler - No prime found for USE "people"
+09:56:02.869 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-5] INFO  o.s.server.actors.PrepareHandler - Prepared Statement has been prepared: |insert into person(name, age, interesting_dates) values (?,?,?)|. Prepared result is: PreparedResultV2(0,17,keyspace,table,List(CqlVarchar, CqlVarchar, CqlVarchar))
+09:56:02.870 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.PrepareHandler - Prepared Statement has been prepared: |select * from person where name = ?|. Prepared result is: PreparedResultV2(0,18,keyspace,table,List(CqlVarchar))
+09:56:02.879 [main] INFO  o.s.http.client.PrimingClient - Sending {"when":{"query":"select * from person"},"then":{"rows":[{"first_name":"Chris","last_name":"Batey","age":29}],"result":"success","column_types":{"age":"int"}}} to url http://localhost:8043/prime-query-single
+09:56:02.884 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.s.cqlmessages.types.ColumnType$ - Java type int
+09:56:02.885 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.s.cqlmessages.types.ColumnType$ - Type is Some(CqlInt)
+09:56:02.885 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.s.priming.query.PrimeQueryStore - Adding prime with criteria PrimeCriteria(select * from person,List(org.scassandra.server.cqlmessages.ANY$@68b9b37b, org.scassandra.server.cqlmessages.ONE$@215f2f6e, org.scassandra.server.cqlmessages.TWO$@77b685f3, org.scassandra.server.cqlmessages.THREE$@701451eb, org.scassandra.server.cqlmessages.QUORUM$@460e54c9, org.scassandra.server.cqlmessages.ALL$@56e07c0d, org.scassandra.server.cqlmessages.LOCAL_QUORUM$@2bf0660a, org.scassandra.server.cqlmessages.EACH_QUORUM$@33bb310f, org.scassandra.server.cqlmessages.SERIAL$@4691ea51, org.scassandra.server.cqlmessages.LOCAL_SERIAL$@15ae9009, org.scassandra.server.cqlmessages.LOCAL_ONE$@777249fd),false) and prime result Prime(List(Map(first_name -> Chris, last_name -> Batey, age -> 29)),Success,Map(first_name -> CqlVarchar, last_name -> CqlVarchar, age -> CqlInt),,,None)
+09:56:02.887 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - Incoming query: select * from person at consistency: org.scassandra.server.cqlmessages.QUORUM$@460e54c9
+09:56:02.887 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - Found matching prime Prime(List(Map(first_name -> Chris, last_name -> Batey, age -> 29)),Success,Map(first_name -> CqlVarchar, last_name -> CqlVarchar, age -> CqlInt),,,None) for query select * from person
+09:56:02.888 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-21] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:02.888 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-16] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:02.888 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-17] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:02.912 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.peers at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.912 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.peers
+09:56:02.912 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.local WHERE key='local' at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.912 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.local WHERE key='local'
+09:56:02.913 [main] WARN  c.d.driver.core.ControlConnection - Cannot find Cassandra version for host localhost/127.0.0.1 to parse the schema, using 2.0.0 based on protocol version in use. If parsing the schema fails, this could be the cause
+09:56:02.913 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-10] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_keyspaces at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.913 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-10] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_keyspaces
+09:56:02.913 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-10] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_columnfamilies at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.913 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-10] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_columnfamilies
+09:56:02.913 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-10] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_columns at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.913 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-10] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_columns
+09:56:02.914 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.peers at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.914 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.peers
+09:56:02.914 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.local WHERE key='local' at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.914 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.local WHERE key='local'
+09:56:02.919 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-10] INFO  o.s.server.actors.QueryHandler - Incoming query: use people at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.919 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-10] INFO  o.s.server.actors.QueryHandler - Incoming query: USE "people" at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.919 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-10] INFO  o.s.server.actors.QueryHandler - No prime found for USE "people"
+09:56:02.920 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.PrepareHandler - Prepared Statement has been prepared: |insert into person(name, age, interesting_dates) values (?,?,?)|. Prepared result is: PreparedResultV2(0,19,keyspace,table,List(CqlVarchar, CqlVarchar, CqlVarchar))
+09:56:02.921 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-17] INFO  o.s.server.actors.PrepareHandler - Prepared Statement has been prepared: |select * from person where name = ?|. Prepared result is: PreparedResultV2(0,20,keyspace,table,List(CqlVarchar))
+09:56:02.930 [main] INFO  o.s.http.client.PrimingClient - Sending {"when":{"query":"select * from person"},"then":{"result":"read_request_timeout"}} to url http://localhost:8043/prime-query-single
+09:56:02.935 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-17] INFO  o.s.s.priming.query.PrimeQueryStore - Adding prime with criteria PrimeCriteria(select * from person,List(org.scassandra.server.cqlmessages.ANY$@68b9b37b, org.scassandra.server.cqlmessages.ONE$@215f2f6e, org.scassandra.server.cqlmessages.TWO$@77b685f3, org.scassandra.server.cqlmessages.THREE$@701451eb, org.scassandra.server.cqlmessages.QUORUM$@460e54c9, org.scassandra.server.cqlmessages.ALL$@56e07c0d, org.scassandra.server.cqlmessages.LOCAL_QUORUM$@2bf0660a, org.scassandra.server.cqlmessages.EACH_QUORUM$@33bb310f, org.scassandra.server.cqlmessages.SERIAL$@4691ea51, org.scassandra.server.cqlmessages.LOCAL_SERIAL$@15ae9009, org.scassandra.server.cqlmessages.LOCAL_ONE$@777249fd),false) and prime result Prime(List(),ReadTimeout,Map(),,,None)
+09:56:02.937 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-17] INFO  o.s.server.actors.QueryHandler - Incoming query: select * from person at consistency: org.scassandra.server.cqlmessages.QUORUM$@460e54c9
+09:56:02.938 [New I/O worker #155] INFO  c.d.d.c.policies.LoggingRetryPolicy - Retrying on read timeout at consistency ONE (initial consistency: QUORUM, required responses: 1, received responses: 0, data retrieved: false, retries: 0)
+09:56:02.938 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-17] INFO  o.s.server.actors.QueryHandler - Incoming query: select * from person at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.943 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-10] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:02.943 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:02.943 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:02.966 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.peers at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.966 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.peers
+09:56:02.966 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.local WHERE key='local' at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.966 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.local WHERE key='local'
+09:56:02.967 [main] WARN  c.d.driver.core.ControlConnection - Cannot find Cassandra version for host localhost/127.0.0.1 to parse the schema, using 2.0.0 based on protocol version in use. If parsing the schema fails, this could be the cause
+09:56:02.967 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_keyspaces at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.967 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_keyspaces
+09:56:02.967 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_columnfamilies at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.967 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_columnfamilies
+09:56:02.967 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_columns at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.967 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_columns
+09:56:02.968 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.peers at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.968 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.peers
+09:56:02.968 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.local WHERE key='local' at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.968 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.local WHERE key='local'
+09:56:02.973 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - Incoming query: use people at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.973 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-5] INFO  o.s.server.actors.QueryHandler - Incoming query: USE "people" at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.973 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-5] INFO  o.s.server.actors.QueryHandler - No prime found for USE "people"
+09:56:02.974 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-21] INFO  o.s.server.actors.PrepareHandler - Prepared Statement has been prepared: |insert into person(name, age, interesting_dates) values (?,?,?)|. Prepared result is: PreparedResultV2(0,21,keyspace,table,List(CqlVarchar, CqlVarchar, CqlVarchar))
+09:56:02.975 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.PrepareHandler - Prepared Statement has been prepared: |select * from person where name = ?|. Prepared result is: PreparedResultV2(0,22,keyspace,table,List(CqlVarchar))
+09:56:02.984 [main] INFO  o.s.http.client.PrimingClient - Sending {"when":{"query":"select * from person"},"then":{"result":"read_request_timeout"}} to url http://localhost:8043/prime-query-single
+09:56:02.987 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-21] INFO  o.s.s.priming.query.PrimeQueryStore - Adding prime with criteria PrimeCriteria(select * from person,List(org.scassandra.server.cqlmessages.ANY$@68b9b37b, org.scassandra.server.cqlmessages.ONE$@215f2f6e, org.scassandra.server.cqlmessages.TWO$@77b685f3, org.scassandra.server.cqlmessages.THREE$@701451eb, org.scassandra.server.cqlmessages.QUORUM$@460e54c9, org.scassandra.server.cqlmessages.ALL$@56e07c0d, org.scassandra.server.cqlmessages.LOCAL_QUORUM$@2bf0660a, org.scassandra.server.cqlmessages.EACH_QUORUM$@33bb310f, org.scassandra.server.cqlmessages.SERIAL$@4691ea51, org.scassandra.server.cqlmessages.LOCAL_SERIAL$@15ae9009, org.scassandra.server.cqlmessages.LOCAL_ONE$@777249fd),false) and prime result Prime(List(),ReadTimeout,Map(),,,None)
+09:56:02.988 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-21] INFO  o.s.server.actors.QueryHandler - Incoming query: select * from person at consistency: org.scassandra.server.cqlmessages.QUORUM$@460e54c9
+09:56:02.989 [New I/O worker #172] INFO  c.d.d.c.policies.LoggingRetryPolicy - Retrying on read timeout at consistency ONE (initial consistency: QUORUM, required responses: 1, received responses: 0, data retrieved: false, retries: 0)
+09:56:02.990 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.QueryHandler - Incoming query: select * from person at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:02.991 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-5] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:02.991 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-20] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:02.991 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-14] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:03.015 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-21] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.peers at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.015 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-21] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.peers
+09:56:03.015 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-21] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.local WHERE key='local' at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.015 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-21] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.local WHERE key='local'
+09:56:03.016 [main] WARN  c.d.driver.core.ControlConnection - Cannot find Cassandra version for host localhost/127.0.0.1 to parse the schema, using 2.0.0 based on protocol version in use. If parsing the schema fails, this could be the cause
+09:56:03.016 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-22] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_keyspaces at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.016 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-22] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_keyspaces
+09:56:03.016 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-22] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_columnfamilies at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.016 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-22] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_columnfamilies
+09:56:03.017 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-22] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_columns at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.017 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-22] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_columns
+09:56:03.017 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-20] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.peers at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.017 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-20] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.peers
+09:56:03.018 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-20] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.local WHERE key='local' at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.018 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-20] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.local WHERE key='local'
+09:56:03.022 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-20] INFO  o.s.server.actors.QueryHandler - Incoming query: use people at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.023 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-3] INFO  o.s.server.actors.QueryHandler - Incoming query: USE "people" at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.023 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-3] INFO  o.s.server.actors.QueryHandler - No prime found for USE "people"
+09:56:03.024 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-22] INFO  o.s.server.actors.PrepareHandler - Prepared Statement has been prepared: |insert into person(name, age, interesting_dates) values (?,?,?)|. Prepared result is: PreparedResultV2(0,23,keyspace,table,List(CqlVarchar, CqlVarchar, CqlVarchar))
+09:56:03.025 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-20] INFO  o.s.server.actors.PrepareHandler - Prepared Statement has been prepared: |select * from person where name = ?|. Prepared result is: PreparedResultV2(0,24,keyspace,table,List(CqlVarchar))
+09:56:03.033 [main] INFO  o.s.http.client.PrimingClient - Sending {"when":{"queryPattern":".*person.*"},"then":{"variable_types":["varchar","int","list\u003ctimestamp\u003e"],"rows":[],"result":"success"}} to url http://localhost:8043/prime-prepared-single
+09:56:03.037 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-20] INFO  o.s.s.cqlmessages.types.ColumnType$ - Java type varchar
+09:56:03.037 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-20] INFO  o.s.s.cqlmessages.types.ColumnType$ - Type is Some(CqlVarchar)
+09:56:03.037 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-20] INFO  o.s.s.cqlmessages.types.ColumnType$ - Java type int
+09:56:03.037 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-20] INFO  o.s.s.cqlmessages.types.ColumnType$ - Type is Some(CqlInt)
+09:56:03.038 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-20] INFO  o.s.s.cqlmessages.types.ColumnType$ - Java type list<timestamp>
+09:56:03.038 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-20] INFO  o.s.s.cqlmessages.types.ColumnType$ - Type is Some(CqlList(CqlTimestamp))
+09:56:03.045 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-3] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.peers at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.045 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-3] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.peers
+09:56:03.045 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-3] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.local WHERE key='local' at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.045 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-3] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.local WHERE key='local'
+09:56:03.046 [main] WARN  c.d.driver.core.ControlConnection - Cannot find Cassandra version for host localhost/127.0.0.1 to parse the schema, using 2.0.0 based on protocol version in use. If parsing the schema fails, this could be the cause
+09:56:03.046 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-3] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_keyspaces at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.046 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-3] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_keyspaces
+09:56:03.046 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-3] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_columnfamilies at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.046 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-3] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_columnfamilies
+09:56:03.046 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-3] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_columns at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.046 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-3] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_columns
+09:56:03.047 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.peers at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.047 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.peers
+09:56:03.047 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.local WHERE key='local' at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.047 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.local WHERE key='local'
+09:56:03.051 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-20] INFO  o.s.server.actors.QueryHandler - Incoming query: use people at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.051 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-20] INFO  o.s.server.actors.QueryHandler - Incoming query: USE "people" at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.051 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-20] INFO  o.s.server.actors.QueryHandler - No prime found for USE "people"
+09:56:03.052 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-12] INFO  o.s.server.actors.PrepareHandler - Prepared Statement has been prepared: |insert into person(name, age, interesting_dates) values (?,?,?)|. Prepared result is: PreparedResultV2(0,25,keyspace,table,List(CqlVarchar, CqlInt, CqlList(CqlTimestamp)))
+09:56:03.054 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-3] INFO  o.s.server.actors.PrepareHandler - Prepared Statement has been prepared: |select * from person where name = ?|. Prepared result is: PreparedResultV2(0,26,keyspace,table,List(CqlVarchar, CqlInt, CqlList(CqlTimestamp)))
+09:56:03.055 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-20] INFO  o.s.server.actors.PrepareHandler - Received execution of prepared statement |insert into person(name, age, interesting_dates) values (?,?,?)| and consistency |org.scassandra.server.cqlmessages.ONE$@215f2f6e|
+09:56:03.055 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-20] INFO  o.s.server.priming.ActivityLog - Recording PreparedStatementExecution(insert into person(name, age, interesting_dates) values (?,?,?),org.scassandra.server.cqlmessages.ONE$@215f2f6e,List(Some(Christopher), Some(29), Some(Buffer(1434732963054))),List(CqlVarchar, CqlInt, CqlList(CqlTimestamp)))
+09:56:03.063 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-21] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:03.063 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-20] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:03.063 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-5] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:03.087 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-4] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.peers at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.087 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-4] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.peers
+09:56:03.087 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-4] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.local WHERE key='local' at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.087 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-4] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.local WHERE key='local'
+09:56:03.088 [main] WARN  c.d.driver.core.ControlConnection - Cannot find Cassandra version for host localhost/127.0.0.1 to parse the schema, using 2.0.0 based on protocol version in use. If parsing the schema fails, this could be the cause
+09:56:03.088 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-15] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_keyspaces at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.088 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-15] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_keyspaces
+09:56:03.088 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-15] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_columnfamilies at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.088 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-15] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_columnfamilies
+09:56:03.088 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-15] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_columns at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.088 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-15] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_columns
+09:56:03.089 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-15] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.peers at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.089 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-15] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.peers
+09:56:03.089 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-15] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.local WHERE key='local' at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.089 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-15] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.local WHERE key='local'
+09:56:03.093 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - Incoming query: use people at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.094 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - Incoming query: USE "people" at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.094 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - No prime found for USE "people"
+09:56:03.095 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-4] INFO  o.s.server.actors.PrepareHandler - Prepared Statement has been prepared: |insert into person(name, age, interesting_dates) values (?,?,?)|. Prepared result is: PreparedResultV2(0,27,keyspace,table,List(CqlVarchar, CqlVarchar, CqlVarchar))
+09:56:03.096 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-5] INFO  o.s.server.actors.PrepareHandler - Prepared Statement has been prepared: |select * from person where name = ?|. Prepared result is: PreparedResultV2(0,28,keyspace,table,List(CqlVarchar))
+[INFO] [06/19/2015 09:56:03.102] [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-5] [akka://CassandraServerStub-8042-8043/user/BinaryTcpListener/$o/$f] Message [org.scassandra.server.cqlmessages.response.Rows] from Actor[akka://CassandraServerStub-8042-8043/deadLetters] to Actor[akka://CassandraServerStub-8042-8043/user/BinaryTcpListener/$o/$f#-189649143] was not delivered. [1] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.
+09:56:03.113 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.peers at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.113 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.peers
+09:56:03.113 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.local WHERE key='local' at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.113 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.local WHERE key='local'
+09:56:03.114 [main] WARN  c.d.driver.core.ControlConnection - Cannot find Cassandra version for host localhost/127.0.0.1 to parse the schema, using 2.0.0 based on protocol version in use. If parsing the schema fails, this could be the cause
+09:56:03.114 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_keyspaces at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.114 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_keyspaces
+09:56:03.114 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_columnfamilies at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.114 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_columnfamilies
+09:56:03.114 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.schema_columns at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.115 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.schema_columns
+09:56:03.115 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-15] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.peers at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.116 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-15] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.peers
+09:56:03.116 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-15] INFO  o.s.server.actors.QueryHandler - Incoming query: SELECT * FROM system.local WHERE key='local' at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.116 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-15] INFO  o.s.server.actors.QueryHandler - No prime found for SELECT * FROM system.local WHERE key='local'
+09:56:03.120 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-5] INFO  o.s.server.actors.QueryHandler - Incoming query: use people at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.121 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-15] INFO  o.s.server.actors.QueryHandler - Incoming query: USE "people" at consistency: org.scassandra.server.cqlmessages.ONE$@215f2f6e
+09:56:03.121 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-15] INFO  o.s.server.actors.QueryHandler - No prime found for USE "people"
+09:56:03.122 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-4] INFO  o.s.server.actors.PrepareHandler - Prepared Statement has been prepared: |insert into person(name, age, interesting_dates) values (?,?,?)|. Prepared result is: PreparedResultV2(0,29,keyspace,table,List(CqlVarchar, CqlVarchar, CqlVarchar))
+09:56:03.123 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-5] INFO  o.s.server.actors.PrepareHandler - Prepared Statement has been prepared: |select * from person where name = ?|. Prepared result is: PreparedResultV2(0,30,keyspace,table,List(CqlVarchar))
+09:56:03.128 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-9] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:03.128 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-15] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+09:56:03.128 [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-21] INFO  o.s.server.actors.ConnectionHandler - Client disconnected.
+[INFO] [06/19/2015 09:56:03.131] [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-10] [akka://CassandraServerStub-8042-8043/user/IO-HTTP/listener-0/0] Message [akka.dispatch.sysmsg.DeathWatchNotification] from Actor[akka://CassandraServerStub-8042-8043/user/IO-HTTP/listener-0/0#-1482201234] to Actor[akka://CassandraServerStub-8042-8043/user/IO-HTTP/listener-0/0#-1482201234] was not delivered. [2] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.
+[INFO] [06/19/2015 09:56:03.131] [CassandraServerStub-8042-8043-akka.actor.default-dispatcher-11] [akka://CassandraServerStub-8042-8043/user/IO-HTTP/listener-0/1] Message [akka.dispatch.sysmsg.DeathWatchNotification] from Actor[akka://CassandraServerStub-8042-8043/user/IO-HTTP/listener-0/1#-1798157878] to Actor[akka://CassandraServerStub-8042-8043/user/IO-HTTP/listener-0/1#-1798157878] was not delivered. [3] dead letters encountered. This logging can be turned off or adjusted with configuration settings 'akka.log-dead-letters' and 'akka.log-dead-letters-during-shutdown'.
+09:56:03.146 [main] INFO  o.scassandra.server.ServerStubRunner - Server is shut down
+Tests run: 11, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 3.121 sec <<< FAILURE!
+testCorrectQueryIssuedOnConnect(com.intuit.cassandra.PersonDaoCassandraTest)  Time elapsed: 0.504 sec  <<< FAILURE!
+java.lang.AssertionError: Expected query not executed, actual queries:  [Query{query='SELECT * FROM system.peers', consistency='ONE'}, Query{query='SELECT * FROM system.local WHERE key='local'', consistency='ONE'}, Query{query='SELECT * FROM system.schema_keyspaces', consistency='ONE'}, Query{query='SELECT * FROM system.schema_columnfamilies', consistency='ONE'}, Query{query='SELECT * FROM system.schema_columns', consistency='ONE'}, Query{query='SELECT * FROM system.peers', consistency='ONE'}, Query{query='SELECT * FROM system.local WHERE key='local'', consistency='ONE'}, Query{query='use people', consistency='ONE'}, Query{query='USE "people"', consistency='ONE'}]
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at com.intuit.cassandra.PersonDaoCassandraTest.testCorrectQueryIssuedOnConnect(PersonDaoCassandraTest.java:120)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.scassandra.junit.ScassandraServerRule$1.evaluate(ScassandraServerRule.java:45)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.scassandra.junit.ScassandraServerRule$1.evaluate(ScassandraServerRule.java:38)
+	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+
+
+Results :
+
+Failed tests:   testCorrectQueryIssuedOnConnect(com.intuit.cassandra.PersonDaoCassandraTest): Expected query not executed, actual queries:  [Query{query='SELECT * FROM system.peers', consistency='ONE'}, Query{query='SELECT * FROM system.local WHERE key='local'', consistency='ONE'}, Query{query='SELECT * FROM system.schema_keyspaces', consistency='ONE'}, Query{query='SELECT * FROM system.schema_columnfamilies', consistency='ONE'}, Query{query='SELECT * FROM system.schema_columns', consistency='ONE'}, Query{query='SELECT * FROM system.peers', consistency='ONE'}, Query{query='SELECT * FROM system.local WHERE key='local'', consistency='ONE'}, Query{query='use people', consistency='ONE'}, Query{query='USE "people"', consistency='ONE'}]
+
+Tests run: 12, Failures: 1, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 5.157s
+[INFO] Finished at: Fri Jun 19 09:56:03 PDT 2015
+[INFO] Final Memory: 23M/310M
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.12.4:test (default-test) on project cassandra-unit-test: There are test failures.
+[ERROR] 
+[ERROR] Please refer to /Users/npipaliya/fdp-dev-workspace/cassandra-unit-test/target/surefire-reports for the individual test results.
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
